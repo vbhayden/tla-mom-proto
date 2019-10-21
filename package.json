@@ -1,0 +1,19 @@
+{
+  "name": "tla-mom-proto",
+  "version": "0.0.1",
+  "description": "Helper library for defining common xAPI verbs and objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbhayden/tla-mom-proto.git"
+  },
+  "author": "Trey Hayden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vbhayden/tla-mom-proto/issues"
+  },
+  "homepage": "https://github.com/vbhayden/tla-mom-proto#readme"
+}
