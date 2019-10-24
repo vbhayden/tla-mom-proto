@@ -25,6 +25,8 @@ module.exports = {
                 return true;
             case this.verbs.verified.id:
                 return true;
+            case this.verbs.asserted.id:
+                return true;
 
             default:
                 return false;
