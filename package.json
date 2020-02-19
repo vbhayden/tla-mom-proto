@@ -1,10 +1,10 @@
 {
   "name": "tla-mom-proto",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "description": "Helper library for defining common xAPI verbs and objects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/vbhayden/tla-mom-proto/issues"
   },
-  "homepage": "https://github.com/vbhayden/tla-mom-proto#readme"
+  "homepage": "https://github.com/vbhayden/tla-mom-proto#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "minify": "^5.1.0",
+    "mocha": "^7.0.1",
+    "uuid": "^3.4.0"
+  }
 }
