@@ -1,6 +1,6 @@
 {
   "name": "tla-mom-proto",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "description": "Helper library for defining common xAPI verbs and objects.",
   "main": "index.js",
   "scripts": {

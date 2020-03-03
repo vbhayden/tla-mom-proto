@@ -27,6 +27,11 @@ module.exports = {
      */
     contextExtensions: require("./lib/contextExtensions"),
     
+    /** 
+     * Set of functions to determine statement conformance and identify problems. 
+     */
+    conformance: require("./lib/conformance"),
+
     /**
      * Checks whether or not a given verb is considered Authoritative.
      * @param {Verb} verb - Verb to check. 
