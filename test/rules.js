@@ -36,4 +36,10 @@ describe("MOM Statement Rule Conformance", () => {
         let results = invalids.filter(conformance)
         chai.expect(results.length).to.equal(0)
     })
+
+    it("Should provide issues for why a statement failed", async() => {
+        
+        let issues = conformance.issues(invalids[0])
+        console.log(issues)
+    })
 })
