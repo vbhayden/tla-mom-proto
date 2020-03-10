@@ -9,7 +9,7 @@ const invalids = require("./samples/invalid")
 
 describe("MOM Statement Rule Conformance", () => {
 
-    it("Should handle dot-pathing correctly", async() => {
+    it("Should handle retrieving dot-pathing correctly", async() => {
 
         let obj = {
             verb: mom.verbs.abandoned,
@@ -25,21 +25,38 @@ describe("MOM Statement Rule Conformance", () => {
         chai.expect(extension).to.equal(123)
     })
 
+    it("Should handle setting dot-pathing correctly", async() => {
+
+        let obj = {}
+        let name = "my-name!"
+        let home = "https://www.adlnet.gov"
+        let namePath = "$.actor.account.name"
+        let homePath = "$.actor.account.homePage"
+
+        conformanceHelpers.setDotPath(obj, namePath, name)
+        conformanceHelpers.setDotPath(obj, homePath, home)
+
+        chai.expect(obj.actor.account.name).to.equal(name)
+        chai.expect(obj.actor.account.homePage).to.equal(home)
+    })
+
     it("Should pass valid statements", async() => {
 
-        let results = valids.filter(conformance)
+        let results = valids.filter(conformance.conformant)
         chai.expect(results.length).to.equal(valids.length)
     })
     
     it("Should fail invalid statements", async() => {
 
-        let results = invalids.filter(conformance)
+        let results = invalids.filter(conformance.conformant)
         chai.expect(results.length).to.equal(0)
     })
 
     it("Should provide issues for why a statement failed", async() => {
         
         let issues = conformance.issues(invalids[0])
-        console.log(issues)
+
+        chai.expect(issues).to.not.be.null
+        chai.expect(Array.isArray(issues)).to.be.true
     })
 })
