@@ -20,6 +20,11 @@ module.exports = {
     /**
      * Collection of all verbs compliant with the TLA MOM profile.
      */
+    objectExtensions: require("./lib/objectExtensions"),
+
+    /**
+     * Collection of all verbs compliant with the TLA MOM profile.
+     */
     resultExtensions: require("./lib/resultExtensions"),
 
     /**

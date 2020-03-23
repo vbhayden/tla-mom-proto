@@ -15,6 +15,7 @@
       "generatedAtTime": "2019-07-19T14:25:59.295Z"
     }
   ],
+  "scopeNote": "The data set used to create this profile was limited, so it is subject to change",
   "author": {
     "type": "Organization",
     "name": "Advanced Distributed Learning (ADL) Initiative"
@@ -29,7 +30,8 @@
       },
       "definition": {
         "en": "Indicates the actor filtered content that aligns to specific goal"
-      }
+      },
+      "scopeNote": "Based on recently selected competency/goal, what content will satisfy (user search criteria)"
     },
     {
       "type": "Verb",
@@ -73,7 +75,8 @@
       },
       "definition": {
         "en": "Indicates that the actor assigned themselves a new learning goal, without needing approval"
-      }
+      },
+      "scopeNote": "See directed if the user is given the learning goal by an outside body"
     },
     {
       "type": "Verb",
@@ -131,7 +134,8 @@
       },
       "definition": {
         "en": "Indicates the actor assigned a learning goal to a learner"
-      }
+      },
+      "scopeNote": "See planned if the user set the goal themselves"
     },
     {
       "type": "Verb",
@@ -153,7 +157,8 @@
       },
       "definition": {
         "en": "Indicates the learner(s) appeared in a Measure of Effectiveness (MOE) search (Learner competency state vs readiness)"
-      }
+      },
+      "scopeNote": "An MOE is a measure on how well a learner can perform an action"
     },
     {
       "type": "Verb",
@@ -175,7 +180,8 @@
       },
       "definition": {
         "en": "Indicates the learner(s) appeared in a Measure of Performance (MOP) search (learner grade in assessment)"
-      }
+      },
+      "scopeNote": "An MOP is a measure of confidence that the learner can perform an action"
     },
     {
       "type": "Verb",
@@ -252,7 +258,8 @@
       },
       "definition": {
         "en": "Indicates an OICS approved a change to a competency framework within the TLA that will affect the learners’ states"
-      }
+      },
+      "scopeNote": "Competency Framework for qualified personnel is achieving high readiness (updates to Competency Management System)"
     },
     {
       "type": "Verb",
@@ -263,7 +270,8 @@
       },
       "definition": {
         "en": "Indicates an authoritative source changed a learner's competency assertions based on a valid competency framework change"
-      }
+      },
+      "scopeNote": "Inferences change weighting in competency framework based on new longitudinal data (updates to Competency Management System)"
     },
     {
       "type": "Verb",
@@ -351,7 +359,8 @@
       },
       "definition": {
         "en": "OICS mobilized the learner to a state of on duty"
-      }
+      },
+      "scopeNote": "This usually means they will be off the grid for a while, causing time late data due to the disconnection"
     },
     {
       "type": "Verb",
@@ -417,7 +426,8 @@
       },
       "definition": {
         "en": "Indicates the actor changed career paths, putting them on a completely different and brand new career trajectory"
-      }
+      },
+      "scopeNote": "EX: a pilot to reclassifies to a jag (lawyer)"
     },
     {
       "type": "Verb",
@@ -428,7 +438,8 @@
       },
       "definition": {
         "en": "Indicates OICS released the learner from the learning environment"
-      }
+      },
+      "scopeNote": "EX: Honorable Discharge, Entered Reserves, Death, etc"
     },
     {
       "type": "Verb",
@@ -439,6 +450,17 @@
       },
       "definition": {
         "en": "Indicates OICS temporarily restricted the learner from some (possibly all) participation within the learning environment"
+      }
+    },
+    {
+      "type": "Verb",
+      "id": "https://w3id.org/xapi/tla/verbs/deselected",
+      "inScheme": "https://w3id.org/xapi/tla/v0.10",
+      "prefLabel": {
+        "en": "deselected"
+      },
+      "definition": {
+        "en": "Indicates the actor removed specific goal or task."
       }
     },
     {
@@ -461,7 +483,8 @@
       },
       "definition": {
         "en": "Any generic activity an actor can interact with, that is not an assessment"
-      }
+      },
+      "scopeNote": "No pass/fail statements, and assertions made by activities are considered weak (low weight)"
     },
     {
       "type": "ActivityType",
@@ -472,7 +495,8 @@
       },
       "definition": {
         "en": "Any generic exercise that assesses the user's level of competence."
-      }
+      },
+      "scopeNote": "Must be followed pass/fail statements, and assertions made by assessments are considered stronger (more weight)"
     },
     {
       "type": "ActivityType",
@@ -483,7 +507,8 @@
       },
       "definition": {
         "en": "Any generic collection of activities and/or assessment activities"
-      }
+      },
+      "scopeNote": "Expected to be used as a context activity"
     },
     {
       "type": "ActivityType",
@@ -494,7 +519,8 @@
       },
       "definition": {
         "en": "An online badge that is earned after achieving multiple related competencies"
-      }
+      },
+      "scopeNote": "Can be used as a learning goal, or as the object of any badging related authoritative verb"
     },
     {
       "type": "ActivityType",
@@ -505,7 +531,8 @@
       },
       "definition": {
         "en": "An authrotative statement that the recipient can perform a task"
-      }
+      },
+      "scopeNote": "Can be used as a learning goal, or as the object of any credentialing related authoritative verb"
     },
     {
       "type": "ActivityType",
@@ -516,7 +543,8 @@
       },
       "definition": {
         "en": "An outline of jobs and their requirements in a career, usually used to outline the expected learning path"
-      }
+      },
+      "scopeNote": "Will usually be used as a learning goal, The object ID should point to metadata about the career"
     },
     {
       "type": "ActivityType",
@@ -552,7 +580,8 @@
       },
       "recommendedVerbs": [
         "https://w3id.org/xapi/tla/verbs/asserted"
-      ]
+      ],
+      "scopeNote": "The percentage level of confidence in the assertion, if negative signifies a negative assertion"
     },
     {
       "id": "https://w3id.org/xapi/tla/extensions/evidence",
@@ -566,7 +595,8 @@
       },
       "recommendedVerbs": [
         "https://w3id.org/xapi/tla/verbs/asserted"
-      ]
+      ],
+      "scopeNote": "This should be an array that holds the reason for the assertion. Will usually just be a single pointer to another xAPI statement, or an array of pointers"
     },
     {
       "id": "https://w3id.org/xapi/tla/extensions/due_date",
@@ -580,7 +610,8 @@
       },
       "recommendedVerbs": [
         "https://w3id.org/xapi/tla/verbs/scheduled"
-      ]
+      ],
+      "scopeNote": "This could become NULL if there is no due date"
     },
     {
       "id": "https://w3id.org/xapi/tla/extensions/permanent_change_of_station",
@@ -643,7 +674,8 @@
       "recommendedVerbs": [
         "https://w3id.org/xapi/tla/verbs/selected",
         "https://w3id.org/xapi/tla/verbs/screened"
-      ]
+      ],
+      "scopeNote": "Should be the same format as the other timestamps within the statement"
     },
     {
       "id": "https://w3id.org/xapi/tla/extensions/reason",
@@ -657,7 +689,8 @@
       },
       "recommendedVerbs": [
         "https://w3id.org/xapi/tla/verbs/released"
-      ]
+      ],
+      "scopeNote": "This should be a URI pointing to the authoritative record that details why the learner has left this ecosystem"
     },
     {
       "id": "https://w3id.org/xapi/tla/extensions/restriction",
@@ -682,7 +715,8 @@
       },
       "definition": {
         "en": "A boolean indicating if the user is performing learning activities while in DEP"
-      }
+      },
+      "scopeNote": "It is recommended to use this extension on any learning statements, but not required"
     },
     {
       "id": "https://w3id.org/xapi/tla/extensions/recommendation_order",
@@ -714,11 +748,13 @@
       "rules": [
         {
           "location": "$.actor",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "When using this profile, every statement should have the learner as the actor."
         },
         {
           "location": "$.authority",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Should be used for all Statements. This will usually show the last trusted source to share/hold the statement"
         },
         {
           "location": "$.id",
@@ -726,7 +762,8 @@
         },
         {
           "location": "$.timestamp",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "All timestamps need to be in the UTC format and should use the same level of accuracy"
         }
       ]
     },
@@ -751,7 +788,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a unique piece of meta-data for the recommended object"
         },
         {
           "location": "$.object.definition.type",
@@ -789,7 +827,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a unique piece of meta-data for the launched activity."
         },
         {
           "location": "$.object.definition.type",
@@ -799,7 +838,8 @@
             "https://w3id.org/xapi/tla/activity-types/assessment"
           ]
         }
-      ]
+      ],
+      "scopeNote": "Indicates the user started a service. This does not always need to be a specific activity, but can be a service provider as well."
     },
     {
       "id": "https://w3id.org/xapi/tla#completed",
@@ -837,7 +877,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a unique piece of meta-data for the completed object."
         },
         {
           "location": "$.object.definition.type",
@@ -847,7 +888,8 @@
             "https://w3id.org/xapi/tla/activity-types/assessment"
           ]
         }
-      ]
+      ],
+      "scopeNote": "Should not contain a score, scores should be included in pass/fail statements instead"
     },
     {
       "id": "https://w3id.org/xapi/tla#passed",
@@ -888,7 +930,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a unique piece of meta-data for the passed activity."
         },
         {
           "location": "$.object.definition.type",
@@ -897,7 +940,8 @@
             "https://w3id.org/xapi/tla/activity-types/assessment"
           ]
         }
-      ]
+      ],
+      "scopeNote": "Usually only used to indicate a passed assessment"
     },
     {
       "id": "https://w3id.org/xapi/tla#failed",
@@ -946,7 +990,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a unique piece of meta-data for the failed activity."
         },
         {
           "location": "$.object.definition.type",
@@ -955,7 +1000,8 @@
             "https://w3id.org/xapi/tla/activity-types/assessment"
           ]
         }
-      ]
+      ],
+      "scopeNote": "Usually only used to indicate a failed assessment"
     },
     {
       "id": "https://w3id.org/xapi/tla/v0.10/templates#satisfied",
@@ -971,7 +1017,8 @@
       "rules": [
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a competency or other unique piece of meta-data"
         },
         {
           "location": "$.object.objectType",
@@ -988,7 +1035,8 @@
             "https://w3id.org/xapi/tla/activity-types/assessment"
           ]
         }
-      ]
+      ],
+      "scopeNote": "This can be used to indicate success in a non assessment activity, and should also follow a passed assessment."
     },
     {
       "id": "https://w3id.org/xapi/tla#abandoned",
@@ -1004,7 +1052,8 @@
       "rules": [
         {
           "location": "$.result.duration",
-          "presence": "recommended"
+          "presence": "recommended",
+          "scopeNote": "The duration property should, at a minimum, be set as the total session time, calculated as the time between the 'Launched' statement and the last statement (of any kind) issued by the AU. The LMS SHOULD also use other (LMS specific) methods (if available) to determine if the total session time was longer."
         },
         {
           "location": "$.result.completed",
@@ -1022,7 +1071,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a competency or other unique piece of meta-data"
         },
         {
           "location": "$.object.definition.type",
@@ -1048,7 +1098,8 @@
       "rules": [
         {
           "location": "$.result.duration",
-          "presence": "recommended"
+          "presence": "recommended",
+          "scopeNote": "The duration property should, at a minimum, be set as the total session time, calculated as the time between the 'Launched' statement and the last statement (of any kind) issued by the AU. The LMS SHOULD also use other (LMS specific) methods (if available) to determine if the total session time was longer."
         },
         {
           "location": "$.result.completed",
@@ -1063,7 +1114,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a competency or other unique piece of meta-data"
         },
         {
           "location": "$.object.definition.type",
@@ -1097,7 +1149,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a competency or other unique piece of meta-data"
         },
         {
           "location": "$.object.objectType",
@@ -1114,7 +1167,8 @@
             "https://w3id.org/xapi/tla/activity-types/activity"
           ]
         }
-      ]
+      ],
+      "scopeNote": "This is different from launched as it relates to a specific activity (such as a chapter in a book) instead of just opening the book."
     },
     {
       "id": "https://w3id.org/xapi/tla#recommended",
@@ -1138,7 +1192,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a unique piece of meta-data, usually a competency or learning activity"
         },
         {
           "location": "$.object.objectType",
@@ -1185,7 +1240,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a unique piece of meta-data, usually a learning activity"
         },
         {
           "location": "$.object.objectType",
@@ -1224,7 +1280,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a unique piece of meta-data about a specific competency"
         },
         {
           "location": "$.object.definition.type",
@@ -1239,7 +1296,8 @@
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/evidence']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This would be an array for the viewed/completed activities"
         }
       ]
     },
@@ -1265,7 +1323,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to the projecting agent"
         },
         {
           "location": "$.object.definition.type",
@@ -1273,7 +1332,8 @@
         },
         {
           "location": "$.result.extensions['https://w3id.org/xapi/tla/extensions/recommendation_order']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be an array of just activity recommendations"
         }
       ]
     },
@@ -1299,7 +1359,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "Each ObjectID needs to map to a unique piece of meta-data about the new learning objective"
         },
         {
           "location": "$.object.definition.type",
@@ -1339,9 +1400,11 @@
           "presence": "included",
           "all": [
             "StatementRef"
-          ]
+          ],
+          "scopeNote": "Each ObjectID needs to map to a unique piece of meta-data about the new learning activity or resource, In the case of a user needs to map to the user's profile information"
         }
-      ]
+      ],
+      "scopeNote": "learner self directed learning that requires approval"
     },
     {
       "id": "https://w3id.org/xapi/tla#requested",
@@ -1365,7 +1428,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be the id of the \"requested\" statement being approved"
         },
         {
           "location": "$.object.definition.type",
@@ -1376,7 +1440,8 @@
             "https://w3id.org/xapi/tla/activity-types/content_set"
           ]
         }
-      ]
+      ],
+      "scopeNote": "learner self directed learning that requires approval"
     },
     {
       "id": "https://w3id.org/xapi/tla#approved",
@@ -1413,7 +1478,8 @@
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/learner']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be a pointer to the learning goal(s) used for this augmented event"
         }
       ]
     },
@@ -1452,7 +1518,8 @@
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/evidence']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be a pointer to the content used for this explored event"
         }
       ]
     },
@@ -1493,7 +1560,8 @@
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/evidence']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be a pointer to the content and goal(s) used for this clarified event"
         }
       ]
     },
@@ -1575,7 +1643,8 @@
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/learner']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This needs to be in the same time zone and format as the rest of the timestamps in this statement"
         }
       ]
     },
@@ -1601,7 +1670,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "The Object ID needs to point to an object in the Competency Framework with a type of \"MOE\""
         },
         {
           "location": "$.object.definition.type",
@@ -1640,7 +1710,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should usually be a pointer to the Competency"
         },
         {
           "location": "$.object.definition.type",
@@ -1675,7 +1746,8 @@
         },
         {
           "location": "$.result.completed",
-          "presence": "excluded"
+          "presence": "excluded",
+          "scopeNote": "The Object ID needs to point to an object in the Competency Framework with a type of \"MOP\""
         },
         {
           "location": "$.object.id",
@@ -1750,7 +1822,8 @@
         },
         {
           "location": "$.result.completed",
-          "presence": "excluded"
+          "presence": "excluded",
+          "scopeNote": "This should point a Competency Object"
         },
         {
           "location": "$.result.score.scaled",
@@ -1758,7 +1831,8 @@
         },
         {
           "location": "$.result.success",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be a pointer to the xAPI statement(s) that resulted in this statement"
         },
         {
           "location": "$.object.id",
@@ -1799,7 +1873,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point a Competency Object"
         },
         {
           "location": "$.object.definition.type",
@@ -1810,7 +1885,8 @@
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/evidence']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be a pointer to the xAPI statement(s) that resulted in this statement"
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/confidence']",
@@ -1836,7 +1912,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to metadata about an activity or content set"
         },
         {
           "location": "$.object.definition.type",
@@ -1873,7 +1950,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point a Competency Object"
         },
         {
           "location": "$.object.definition.type",
@@ -1904,7 +1982,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point a Competency Object"
         },
         {
           "location": "$.object.definition.type",
@@ -1935,7 +2014,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point a Competency Object"
         },
         {
           "location": "$.object.definition.type",
@@ -1946,7 +2026,8 @@
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/evidence']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be a pointer to the xAPI asserted statement was just validated"
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/confidence']",
@@ -1972,7 +2053,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point a Competency Object"
         },
         {
           "location": "$.object.definition.type",
@@ -1983,7 +2065,8 @@
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/evidence']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be a pointer to the xAPI statement(s) that resulted in this statement"
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/confidence']",
@@ -1993,7 +2076,8 @@
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/learner']",
           "presence": "included"
         }
-      ]
+      ],
+      "scopeNote": "Inferences change weighting in competency framework based on new longitudinal data (updates to Competency Management System)"
     },
     {
       "id": "https://w3id.org/xapi/tla#inferred",
@@ -2013,7 +2097,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a badge"
         },
         {
           "location": "$.object.definition.type",
@@ -2024,7 +2109,8 @@
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/evidence']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be a pointer to the xAPI statement(s) that resulted in this statement"
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/confidence']",
@@ -2050,7 +2136,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a job"
         },
         {
           "location": "$.object.definition.type",
@@ -2061,7 +2148,8 @@
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/evidence']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be a pointer to the xAPI statement(s) that resulted in this statement"
         }
       ]
     },
@@ -2083,7 +2171,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a competency"
         },
         {
           "location": "$.object.definition.type",
@@ -2094,7 +2183,8 @@
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/evidence']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be a pointer to the xAPI statement(s) that resulted in this statement"
         }
       ]
     },
@@ -2116,7 +2206,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a competency"
         },
         {
           "location": "$.object.definition.type",
@@ -2127,7 +2218,8 @@
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/evidence']",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should be a pointer to the xAPI statement(s) that resulted in this statement"
         },
         {
           "location": "$.context.extensions['https://w3id.org/xapi/tla/extensions/confidence']",
@@ -2157,7 +2249,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a branch of the military"
         },
         {
           "location": "$.object.definition.type",
@@ -2194,7 +2287,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a defined career trajectory"
         },
         {
           "location": "$.object.definition.type",
@@ -2227,7 +2321,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a specific career_state"
         },
         {
           "location": "$.object.definition.type",
@@ -2256,7 +2351,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a specific career_state"
         },
         {
           "location": "$.object.definition.type",
@@ -2301,7 +2397,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a specific role"
         },
         {
           "location": "$.object.definition.type",
@@ -2342,7 +2439,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a specific role"
         },
         {
           "location": "$.object.definition.type",
@@ -2383,7 +2481,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a specific rank"
         },
         {
           "location": "$.object.definition.type",
@@ -2428,7 +2527,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a specific rank"
         },
         {
           "location": "$.object.definition.type",
@@ -2461,7 +2561,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a specific rank"
         },
         {
           "location": "$.object.definition.type",
@@ -2502,7 +2603,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a specific career"
         },
         {
           "location": "$.object.definition.type",
@@ -2543,7 +2645,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a specific role the learner filled before leaving"
         },
         {
           "location": "$.object.definition.type",
@@ -2572,7 +2675,8 @@
         },
         {
           "location": "$.object.id",
-          "presence": "included"
+          "presence": "included",
+          "scopeNote": "This should point to a specific role the learner filled before being restricted"
         },
         {
           "location": "$.object.definition.type",
@@ -2667,6 +2771,9 @@
             "https://w3id.org/xapi/tla/activity-types/competency",
             "https://w3id.org/xapi/tla/activity-types/activity"
           ]
+        },
+        {
+          "location": "$.object.definition.extensions['https://w3id.org/xapi/tla/extensions/instance']"
         }
       ]
     }
