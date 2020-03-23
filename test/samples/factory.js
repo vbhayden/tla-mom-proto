@@ -10,7 +10,12 @@ const factory = {
         return {
             actor: factory.accountActor(HOMEPAGE, uuid(), "Generic Actor"),
             verb: mom.verbs.captured,
-            object: factory.object(ACTIVITY)
+            object: {
+                ...factory.object(ACTIVITY),
+                definition: {
+                    type: mom.activityTypes.activity
+                }
+            }
         }
     },
 
