@@ -19,7 +19,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "minify": "^5.1.0",
-    "mocha": "^7.0.1",
+    "mocha": "^10.2.0",
     "uuid": "^3.4.0"
   }
 }
